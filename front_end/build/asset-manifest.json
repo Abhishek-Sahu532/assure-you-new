@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/e-commerce-app/static/css/main.12ad0538.css",
+    "main.js": "/e-commerce-app/static/js/main.9553b26c.js",
+    "static/js/787.498e3191.chunk.js": "/e-commerce-app/static/js/787.498e3191.chunk.js",
+    "static/media/banner2.jpg": "/e-commerce-app/static/media/banner2.7a2d5553d5954748128a.jpg",
+    "static/media/banner3.jpg": "/e-commerce-app/static/media/banner3.d74e224ffe5378e3730f.jpg",
+    "static/media/banner4.jpg": "/e-commerce-app/static/media/banner4.880b20d5cf6b6329514c.jpg",
+    "static/media/banner1.jpg": "/e-commerce-app/static/media/banner1.27edeaba277ffe649f81.jpg",
+    "static/media/banner6.jpg": "/e-commerce-app/static/media/banner6.d5db5979693408b28e4f.jpg",
+    "static/media/banner5.jpg": "/e-commerce-app/static/media/banner5.b0845a5ac8b8ca347f7d.jpg",
+    "static/media/banner7.jpg": "/e-commerce-app/static/media/banner7.cc11dc118d40def766a5.jpg",
+    "static/media/logo.png": "/e-commerce-app/static/media/logo.a2febecd19b342dbbaef.png",
+    "static/media/Profile.png": "/e-commerce-app/static/media/Profile.697fdcd21f6d157b9073.png",
+    "static/media/playstore.png": "/e-commerce-app/static/media/playstore.82b4831979e0ce7c733e.png",
+    "static/media/Appstore.png": "/e-commerce-app/static/media/Appstore.d0c5839937e3c36285f6.png",
+    "index.html": "/e-commerce-app/index.html",
+    "main.12ad0538.css.map": "/e-commerce-app/static/css/main.12ad0538.css.map",
+    "main.9553b26c.js.map": "/e-commerce-app/static/js/main.9553b26c.js.map",
+    "787.498e3191.chunk.js.map": "/e-commerce-app/static/js/787.498e3191.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12ad0538.css",
+    "static/js/main.9553b26c.js"
+  ]
+}

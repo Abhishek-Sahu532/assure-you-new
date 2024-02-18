@@ -1,0 +1,135 @@
+.banner {
+  /* height: 100vmin; */
+  margin-top: 5vmax;
+  width: 100vw;
+  height: auto;
+  /* z-index: -1; */
+}
+.carousel {
+  display: block;
+  width: 100vw;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  /* margin-left: -5.5vmax; */
+  z-index: -6;
+}
+
+.carousel img {
+  width: 100vw;
+  height: auto;
+  vertical-align: top;
+}
+
+.banner > p {
+  font: 300 1.4vmax "Lucida Sans";
+}
+
+.container {
+  display: flex;
+  margin: 2vmax auto;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: -20vmax;
+  z-index: 6;
+  overflow: auto;
+  margin-bottom: 30vmax;
+  /* background-color: red; */
+  /* border: 1px solid red; */
+}
+
+/* PRODUCT CARD */
+
+.productCard {
+  width: 17vmax;
+  height: 30vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+  border-radius: 5px;
+  /* border: 1px solid red; */
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.productCard > img {
+  width: 17vmax;
+  height: 25vmax;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.productCard > div {
+  margin: 0.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.productCardSpan {
+  margin: 0.5vmax;
+  font: 300 0.7vmax "Roboto";
+}
+
+.productCard > p {
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: tomato;
+  font-family: "Franklin Gothic Medium", "sans serif";
+  font-size: "1vmax";
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+  /* transform: translate(-1vmax); */
+}
+
+@media screen and (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCardSpan {
+    margin: 0 0.5vmax;
+    font: 300 1vmax "Roboto";
+  }
+}
+
+/* USER OPTIONS */
+
+.speedDial {
+
+  position: fixed;
+  right: 2vmax;
+  top: 0.7vmax;
+
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
