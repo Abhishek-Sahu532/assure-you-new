@@ -20,9 +20,6 @@
     "animate.css": "^4.1.1",
     "axios": "^1.5.1",
     "country-state-city": "^3.2.1",
-    "framer-motion": "^6.5.1",
-    "gh-pages": "^6.1.1",
-    "overlay-navbar": "^1.2.3",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
@@ -43,14 +40,12 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
- 
   },
-  "homepage": "https://Abhishek-Sahu532.github.io/e-commerce-app",
+  "homepage": "https://Abhishek-Sahu532.github.io/assure-you-new",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -69,5 +64,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://192.168.245.52:6000"
+  "proxy": "http://192.168.1.37:6000"
 }
