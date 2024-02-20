@@ -64,10 +64,10 @@ const Home = () => {
   }, [dispatch, error, alert]);
 
   return (
-    // <Fragment>
-    //   {loading ? (
-    //     <Loader />
-    //   ) : (
+    <Fragment>
+      {loading ? (
+        <Loader />
+      ) : (
         <Fragment>
           <Metadata title="Assure You" />
           <div className="banner">
@@ -91,8 +91,8 @@ const Home = () => {
 <SuperQuality />
 <Services />
         </Fragment>
-    //   )}
-    // </Fragment>
+      )}
+    </Fragment>
   );
 };
 

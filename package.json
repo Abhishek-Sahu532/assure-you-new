@@ -1,5 +1,5 @@
 {
-  "name": "assure",
+  "name": "assure-you-new",
   "version": "1.0.0",
   "description": "",
   "main": "backend/server.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Abhishek-Sahu532/e_commerce.git"
+    "url": "git+https://github.com/Abhishek-Sahu532/assure-you-new.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Abhishek-Sahu532/e_commerce/issues"
+    "url": "https://github.com/Abhishek-Sahu532/assure-you-new/issues"
   },
-  "homepage": "https://github.com/Abhishek-Sahu532/e_commerce#readme",
+  "homepage": "https://github.com/Abhishek-Sahu532/assure-you-new#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.0",
