@@ -1,0 +1,95 @@
+#products {
+  font-family: "Montserrat", sans-serif;
+  /* margin: 10vmax 10vmax; */
+  /* margin: 0 10vmax; */
+}
+
+.productDesc {  
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  /* justify-content: flex-start; */
+  width: 80vw;
+  margin-left: 5vmax;
+  margin-top: 0.5rem;
+}
+
+.productDesc h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+.productDesc h2 span {
+  color: tomato;
+}
+
+
+.productDesc p{
+  text-wrap: pretty;
+  font-size: 1.3vmax;
+  width: 60vw;
+}
+
+.productDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap:wrap;
+  /* align-content: space-between; */
+  /* display: grid; */
+  margin-top: 4rem;
+  /* grid-template-columns: repeat(1, minmax(0, 1fr)); */
+  /* gap: 3.5rem; */
+}
+
+/* @media (min-width: 640px) { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 1rem; 
+   }
+  @media (min-width: 768px) { 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+   }
+  @media (min-width: 1024px) { 
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+   } */
+
+.popularProductCard {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1 1 0%; */
+  border-radius: 20px;
+}
+
+.popularProductCard > div {
+  display: flex;
+  margin-top: 2rem;
+  gap: 0.625rem;
+  justify-content: flex-start;
+}
+
+.popularProductCard .productImage{
+  border-radius: 20px;
+}
+
+.popularProductCard > div .rating {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 1.5;
+}
+
+h3 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.price {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}

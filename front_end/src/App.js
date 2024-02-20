@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import WebFont from "webfontloader";
-import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home.js";
 import ProductDetails from "./components/Product/ProductDetails.js";
 import { Route, Routes } from "react-router-dom";
@@ -38,7 +37,7 @@ import UpdateUser from "./components/Admin/UpdateUser.js";
 import ProductReview from "./components/Admin/ProductReview.js";
 import NotFound from "./components/NotFound/NotFound.js";
 import Navbar from "./components/Navbar/Navbar.js";
-
+import Footer from "./Sections/Footer/Footer.js";
 
 
 function App() {
@@ -50,7 +49,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Roboto", "Droid Sans", "Chilanka"],
+        families: ["Roboto", "Droid Sans", "Chilanka", "Montserrat" ],
       },
     });
 
@@ -65,12 +64,13 @@ function App() {
         const { data } = await axios.get("/api/v1/stripeapikey");
         setStripeKey(data.stripeApiKey);
       }catch(e){
-        console.log('Error fetching in stripe key', e)
+        // console.log('Error fetching in stripe key', e)
+        return e
       }
     }
     getStripeApiKey();
     store.dispatch(loadUser()); //when user logged in, In the homepage the details of user will load
-  }, [ user]);
+  }, []);
   return (
     <div className="App">
       {stripeKey && (
@@ -127,132 +127,6 @@ function App() {
   
 
         </Route>
-
-        {/* <Route
-          path="/account/"
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={Profile}
-        /> */}
-
-        {/* <Route
-          element={
-            <ProtectedRoute
-              exact
-              path="/me/update/*"
-              component={UpdateProfile}
-            />
-          }
-        /> */}
-
-        {/* <Route
-          exact
-          path="/password/update"
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={UpdatePassword}
-        /> */}
-
-        {/* <Route exact path="/cart" Component={Cart} /> */}
-
-        {/* <Route
-          exact
-          path="/cart/shipping"
-          isAuthenticated={isAuthenticated}
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={Shipping}
-        /> */}
-
-        {/* <Route
-          exact
-          path="/success"
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={Success}
-        /> */}
-        {/* <Route
-          exact
-          path="/orders"
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={MyOrders}
-        /> */}
-
-        {/* <Route
-          exact
-          path="/order/confirm"
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={ConfirmOrder}
-        /> */}
-        {/* <Route
-          path="/order/:id"
-          element={<ProtectedRoute isAuthenticated={isAuthenticated} />}
-          Component={OrderDetails}
-        /> */}
-
-        {/* <Route
-          path="/admin/dashboard"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={Dashboard}
-        /> */}
-        {/* <Route
-          path="/admin/products"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={ProductList}
-        /> */}
-        {/* <Route
-          path="/admin/product"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={NewProduct}
-        /> */}
-
-        {/* <Route
-          path="/admin/product/:id"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={UpdateProduct}
-        /> */}
-        {/* <Route
-          path="/admin/orders"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={OrderList}
-        /> */}
-        {/* <Route
-          path="/admin/order/:id"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={ProcessOrder}
-        /> */}
-
-        {/* <Route
-          path="/admin/users"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={UsersList}
-        /> */}
-
-        {/* <Route
-          path="/admin/user/:id"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={UpdateUser}
-        /> */}
-
-        {/* <Route
-          path="/admin/reviews"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={true} />
-          }
-          Component={ProductReview}
-        /> */}
 
          <Route
           Component={

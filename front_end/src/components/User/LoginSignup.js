@@ -10,6 +10,7 @@ import { login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import { useSearchParams } from 'react-router-dom';
+import OAuth from "../../OAuth/OAuth";
 
 
 
@@ -160,6 +161,8 @@ const LoginSingup = () => {
 
                 <Link to="/password/forget">Forget Password</Link>
                 <input type="submit" value="Login" className="loginBtn" />
+
+                <OAuth />
               </form>
               <form
                 className="signUpForm"
@@ -210,6 +213,7 @@ const LoginSingup = () => {
                   />
                 </div>
                 <input type="submit" value="Register" className="signupBtn" />
+                <OAuth />
               </form>
             </div>
           </div>

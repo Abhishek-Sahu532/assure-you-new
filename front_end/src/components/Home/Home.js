@@ -14,6 +14,9 @@ import banner4 from "../../assets/images/banner4.jpg";
 import banner5 from "../../assets/images/banner5.jpg";
 import banner6 from "../../assets/images/banner6.jpg";
 import banner7 from "../../assets/images/banner7.jpg";
+import PopularProducts from "../../Sections/PopularProducts/PopularProducts.js";
+import SuperQuality from "../../Sections/SuperQuality/SuperQuality.js";
+import Services from "../../Sections/Services/Services.js";
 
 
 const Home = () => {
@@ -61,10 +64,10 @@ const Home = () => {
   }, [dispatch, error, alert]);
 
   return (
-    <Fragment>
-      {loading ? (
-        <Loader />
-      ) : (
+    // <Fragment>
+    //   {loading ? (
+    //     <Loader />
+    //   ) : (
         <Fragment>
           <Metadata title="Assure You" />
           <div className="banner">
@@ -83,9 +86,13 @@ const Home = () => {
                 <ProductCard product={product} key={product.name} />
               ))}
           </div>
+
+<PopularProducts />
+<SuperQuality />
+<Services />
         </Fragment>
-      )}
-    </Fragment>
+    //   )}
+    // </Fragment>
   );
 };
 

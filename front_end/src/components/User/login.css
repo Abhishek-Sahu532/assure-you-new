@@ -101,7 +101,7 @@
 }
 
 .loginBtn,
-.signupBtn {
+.signupBtn, .googleBtn {
   border: none;
   background-color: #7286d3;
   color: white;
@@ -109,6 +109,8 @@
   padding: 0.8vmax;
   cursor: pointer;
   transition: all 0.5s;
+  font-weight: 700;
+  font-size: 1.2vmax;
   border-radius: 4px;
   outline: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
