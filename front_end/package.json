@@ -47,7 +47,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://Abhishek-Sahu532.github.io/assure-you-new",
+  "homepage": "https://Abhishek-Sahu532.github.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
