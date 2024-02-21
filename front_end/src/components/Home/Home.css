@@ -9,7 +9,7 @@
   display: block;
   width: 100vw;
   height: auto;
-  position: relative;
+  /* position: relative; */
   margin: 0 auto;
   padding: 0;
   /* margin-left: -5.5vmax; */
@@ -121,11 +121,9 @@
 /* USER OPTIONS */
 
 .speedDial {
-
   position: fixed;
   right: 2vmax;
   top: 0.7vmax;
-
 }
 
 .speedDialIcon {

@@ -12,22 +12,22 @@ const PopularProducts = () => {
         {
             imgURL: shoe4,
             name: "Nike Air Jordan-01",
-            price: "$200.20",
+            price: "₹ 200",
         },
         {
             imgURL: kaliniSuts,
-            name: "Nike Air Jordan-10",
-            price: "$210.20",
+            name: "Shibori Dyed Regular Kurta with Trousers",
+            price: "₹ 869",
         },
         {
             imgURL: noise,
-            name: "Nike Air Jordan-100",
-            price: "$220.20",
+            name: "Buds VS102 Plus",
+            price: "₹ 660",
         },
         {
             imgURL: roadsterShirt,
-            name: "Nike Air Jordan-001",
-            price: "$230.20",
+            name: "Men Black & Grey Checked Pure Cotton Casual Shirt",
+            price: "₹ 649",
         },
     ];
     return (

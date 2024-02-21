@@ -1,7 +1,7 @@
 .myOrdersPage {
   width: 100vw;
   max-width: 100%;
-  padding: 5vmax 9vmax;
+  padding: 3vmax 9vmax;
   box-sizing: border-box;
   background-color: rgb(235, 235, 235);
   position: fixed;
@@ -10,7 +10,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
- 
+  margin-top: 5vmax;
 }
 
 #myOrdersHeading {
@@ -55,6 +55,7 @@
   .myOrdersPage {
     padding: 0;
     height: 93vh;
+    margin-top: 11vmax;
   }
   #myOrdersHeading {
     font: 300 4vw "Roboto";

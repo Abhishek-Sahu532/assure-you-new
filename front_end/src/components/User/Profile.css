@@ -7,7 +7,7 @@
   left: 0%;
   max-width: 100%;
   background-color: white;
-  margin-top: 6vmax;
+  margin-top: 5vmax;
 }
 
 .profileContainer > div {
@@ -96,7 +96,7 @@
 @media screen and (max-width: 600px) {
   .profileContainer {
     flex-direction: column;
-    margin-top: 16vmax;
+    margin-top: 10vmax;
   }
 
   .profileContainer > div:first-child > h1 {

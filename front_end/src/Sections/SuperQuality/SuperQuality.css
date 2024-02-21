@@ -1,16 +1,16 @@
 #about-us {
   display: flex;
-  gap: 2.5rem;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  justify-content: space-evenly;
   margin-top: 4vmax;
+  font-family: Montserrat, sans-serif;
 }
 
 #about-us .textDisc {
   display: flex;
   flex-direction: column;
-  flex: 1 1 0%;
+  /* padding-right: 2rem; */
+  padding: 4vmax;
+  padding-right: 16vmax;
 }
 
 #about-us .textDisc h2 {
@@ -19,22 +19,78 @@
   font-weight: 700;
   text-transform: capitalize;
 
+
   /* @media (min-width: 1024px) { 
   max-width: 32rem; 
  } */
 }
 
+
+
 #about-us .textDisc h2 span {
   color: tomato;
 }
 
+
+#about-us .textDisc p{
+  margin-top: 2vmax;
+  padding-right: 10vmax;
+  text-wrap: wrap;
+  line-height: 2vmax;
+  color: rgb(117, 115, 115);
+  font-weight: 500;
+}
 .buttonDiv {
-  margin-top: 2.75rem;
+  margin-top: 2vmax;
+}
+
+button{
+  border: none;
+  border-radius: 30px;
+  background-color: tomato;
+  color: white;
+  padding: 15px;
+  font-size: 1.5vmax;
 }
 
 .imageDiv {
   display: flex;
-  flex: 1 1 0%;
   justify-content: center;
   align-items: center;
+  padding: 3vmax;
+}
+.imageDiv img{
+  width: fit-content;
+  height: auto;
+}
+@media screen and (max-width : 600px) {
+  #about-us {
+    flex-direction: column;
+ align-content: space-between;
+ flex-direction: column-reverse;
+ margin-top: 2vmax;
+  }
+  .imageDiv img{
+    width: 300px;
+    height: 522px
+  }
+
+  #about-us .textDisc{
+    padding: 2vmax;
+  }
+  #about-us .textDisc h2{
+    text-align: center;
+  }
+
+  #about-us .textDisc p{
+    margin-top: 2vmax;
+  text-align: center;
+    line-height: 5vmax;
+    padding: 2vmax;
+
+  }
+  button{
+   justify-items: center;
+    font-size: 2.5vmax;
+  }
 }

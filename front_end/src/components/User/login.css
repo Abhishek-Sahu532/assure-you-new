@@ -34,15 +34,14 @@
 }
 
 .login_singup_toggle > p:hover {
-  color: #7286d3
+  color: #7286d3;
 }
 
 .LoginSignupBox > div > button {
   background-color: #7286d3;
-  height: 3px;
+  /* height: 1px; */
   width: 50%;
   border: none;
-
   transition: all 0.5s;
 }
 
@@ -101,7 +100,8 @@
 }
 
 .loginBtn,
-.signupBtn, .googleBtn {
+.signupBtn,
+.googleBtn {
   border: none;
   background-color: #7286d3;
   color: white;

@@ -9,11 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from "react-router-dom";
 import OAuth from "../../OAuth/OAuth";
-
-
-
 
 const LoginSingup = () => {
   // const location = useLocation();
@@ -25,7 +22,6 @@ const LoginSingup = () => {
     (state) => state.user
   );
   const [searchParams] = useSearchParams();
-
 
   const loginTab = useRef(null);
   const registerTab = useRef(null);
@@ -54,7 +50,7 @@ const LoginSingup = () => {
   // const redirect = location.search ? location.search.split("=")[1] : "/account";
 
   useEffect(() => {
-    const redirect = searchParams.get('redirect') || "/account";
+    const redirect = searchParams.get("redirect") || "/account";
     if (error) {
       alert.error(error);
       // dispatch(clearErrors())
@@ -62,7 +58,7 @@ const LoginSingup = () => {
     if (isAuthenticated) {
       //IF THE USER IS ALREADY LOGGED IN, IT WILL PUSHED-REDIRECTED TO THE ACCOUNT PAGE
       navigate(redirect);
-    } 
+    }
     // else {
     //   navigate("/login");
     // }

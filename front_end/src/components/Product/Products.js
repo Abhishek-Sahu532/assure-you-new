@@ -10,7 +10,6 @@ import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 // import {Metadata} from '../Metadata'
 
-
 const categories = [
   "Laptop",
   "Footwear",
@@ -31,14 +30,11 @@ const Products = () => {
   const [price, setPrice] = useState([0, 25000]);
   const [category, setCategory] = useState("");
 
-  const [rating, setRating] = useState(0)
+  const [rating, setRating] = useState(0);
 
-  const {
-    products,
-    loading,
-    productsCount,
-    resultPerPage,
-  } = useSelector((state) => state.products);
+  const { products, loading, productsCount, resultPerPage } = useSelector(
+    (state) => state.products
+  );
 
   // console.log(error)
 
@@ -61,7 +57,7 @@ const Products = () => {
       {loading ? (
         <Loader />
       ) : (
-        <Fragment>
+        <Fragment className="productsDiv">
           <h2 className="productHeading">Products</h2>
           <div className="products">
             {products &&
@@ -96,7 +92,7 @@ const Products = () => {
             </ul>
 
             <fieldset>
-            <Typography>Ratings</Typography>
+              <Typography>Ratings</Typography>
               <Typography>
                 <Slider
                   value={rating}
@@ -136,7 +132,6 @@ const Products = () => {
     </Fragment>
   );
 };
-
 
 // Products.whyDidYouRender = true
 export default Products;

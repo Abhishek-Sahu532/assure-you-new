@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   justify-content:space-between;
   margin-top: 6rem;
+  padding: 2vmax;
+  gap: 1vmax;
+  
 }
 
 .ServiceCardDiv {
@@ -13,6 +16,7 @@
   flex: 1 1 0%;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
   /* @media (min-width: 640px) { 
   width: 350px;
  } */

@@ -131,7 +131,7 @@ const ProductDetails = () => {
         <Loader />
       ) : (
         <Fragment>
-          <Metadata title={`${product.name} --Ecommerce`} />
+          <Metadata title={`${product.name} --Assure You`} />
           <div className="ProductDetails">
             <div>
               <Carousel className="productDetailsCarousel"

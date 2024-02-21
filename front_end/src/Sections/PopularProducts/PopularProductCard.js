@@ -13,7 +13,7 @@ const PopularProductCard = ({ imgURL, name, price }) => {
         <p className='rating' >4.5</p>
       </div>
 
-      <h3 >{name}</h3>
+      <p className='productname' >{name}</p>
       <p className='price'>{price}</p>
     </div>
   )
