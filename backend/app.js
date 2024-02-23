@@ -36,7 +36,7 @@ app.use('/api/v1' , payment);
 app.use(express.static(path.join(__dirname, "../front_end/build")))
 
 app.get('/*', function (req, res){
-    res.sendFile(path.join(__dirname, "../front_end/build/index.html"))
+   res.redirect('https://assure-you.netlify.app/');
 })
 
 //middleware for error
