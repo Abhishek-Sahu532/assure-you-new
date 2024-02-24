@@ -102,7 +102,7 @@ function Navbar({ user }) {
     <AppBar position="static" className="navbar">
       <Container
         maxWidth="xl"
-        sx={{ backgroundColor: "white", position: "fixed", zIndex: "10"  }}
+        sx={{ backgroundColor: "white", position: "fixed", zIndex: "10" }}
       >
         <Toolbar disableGutters>
           {/* DESKTOP VIEW*/}
@@ -113,7 +113,6 @@ function Navbar({ user }) {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-        
             }}
           >
             <img src={logo} alt="logo" width={"auto"} height={45} />
@@ -154,18 +153,9 @@ function Navbar({ user }) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.component} onClick={handleCloseNavMenu} >
-                  <Typography
-                    textAlign="center"
-                    component="p"
-
-                  >
-                    <Link
-
-                      to={page.path}
-                    >
-                      {page.component}{" "}
-                    </Link>
+                <MenuItem key={page.component} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" component="p">
+                    <Link to={page.path}>{page.component} </Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -189,7 +179,7 @@ function Navbar({ user }) {
               <Button
                 key={page.component}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" , zIndex: "15"}}
+                sx={{ my: 2, color: 'inherit', display: "block", zIndex: "15", }}
               >
                 <Link to={page.path}>{page.component} </Link>
               </Button>
