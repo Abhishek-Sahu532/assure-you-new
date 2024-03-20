@@ -7,6 +7,29 @@ const cloudinary = require("cloudinary");
 
 //REGISTER A USER
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *    User:
+ *      type : object
+ *      required:
+ *        -name
+ *        -email
+ *        -password
+ *        -isAdmin
+ *      properties:
+ *        id:
+ *          type: INTEGER
+ *          description : 'Automatically generated'
+ *          name:
+ *            type: STRING
+ *            descrioption: Name of User
+ *          email:
+ *           type: STRING
+ *           descrioption: Name of Email
+ */
 exports.registerUser = async (req, res, next) => {
   try {
     const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
