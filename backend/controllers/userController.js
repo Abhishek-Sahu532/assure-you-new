@@ -12,7 +12,7 @@ const cloudinary = require("cloudinary");
  * @swagger
  * components:
  *   schemas:
- *    NewUser:
+ *    User:
  *      type : object
  *      required:
  *        -name
@@ -23,23 +23,23 @@ const cloudinary = require("cloudinary");
  *        id:
  *          type: STRING
  *          description : The auto-generated objectId by the MongoDb
- *          name:
+ *        name:
  *            type: STRING
  *            descrioption: Name of the User
- *          email:
+ *        email:
  *           type: STRING
  *           descrioption: Email of the User
- *          password:
+ *        password:
  *           type: STRING
  *           descrioption: Password of the user (8 characters long)
  *          userRole:
  *           type: STRING
- *           descrioption: By default the user only signup as an user, only the admin will make him/her an admin
- *        example:
- *          name: Abhishek
- *          email: asahu532@gmail.com
- *          password : 123456789
- *          userRole : User
+ *           descrioption: By default the user only signup as an user, only the admin will make him/her an admin.
+ *      example:
+ *        name: Abhishek
+ *        email: asahu532@gmail.com
+ *        password : 123456789
+ *        userRole : User
  */
 exports.registerUser = async (req, res, next) => {
   try {
@@ -87,7 +87,7 @@ exports.registerUser = async (req, res, next) => {
  *      content:
  *        application/json
  *          schema: 
- *            $ref : "#/components/schemas/newUser"
+ *            $ref : "#/components/schemas/User"
  *     responses:
  *      201:
  *        description: The user is successfully created
@@ -429,9 +429,9 @@ exports.deleteUser = async (req, res, next) => {
 
 exports.google = async (req, res, next) => {
   try {
-    const user = await User.findOne({ email : req.body.email  });
+    const user = await User.findOne({ email: req.body.email });
     if (user) { //IF THE USER EXIST
-      
+
       return sendToken(user, 200, res);
     } else { //CREATING THE NEW USER
       const generatedPassword = Math.random().toString(36).slice(-8)
@@ -444,7 +444,7 @@ exports.google = async (req, res, next) => {
           public_id: Math.random().toString(36),
           url: req.body.avatar,
         },
-      }); 
+      });
 
       await user.save();
       return sendToken(user, 200, res);

@@ -8,7 +8,7 @@ const dotenv = require('dotenv')
 const multer = require('multer');
 const path = require('path')
 const swaggerUI = require('swagger-ui-express');
-const swaggerJsDoc = require('swagger-jsdoc')
+const swaggerJsdoc = require('swagger-jsdoc');
 
 //config
 dotenv.config({ path: 'backend/config/.env' })
@@ -20,9 +20,10 @@ app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 app.use(multer({ dest: 'backend/uploads/', limits: { fileSize: 10 * 1024 * 1024 } }).single('image'));
 
 
-const spec = swaggerJsDoc({
+const spec = swaggerJsdoc({
+    failOnErrors: true,
     definition: {
-        openapi: '3.0.0',
+        openapi: '3.1.0',
         info: {
             title: 'Assure You Api',
             version: '1.0.0',
@@ -34,7 +35,7 @@ const spec = swaggerJsDoc({
             }
         ]
     },
-    apis: ["./routes/*.js"]
+    apis: ["./routes/*.js", "./controllers/*.js"]
 })
 
 //Routes
@@ -53,7 +54,7 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(spec));
 
 app.use(express.static(path.join(__dirname, "../front_end/build")));
 
-app.get('/*', function (req, res){
+app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, "../front_end/build/index.html"))
 })
 
