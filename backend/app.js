@@ -34,7 +34,7 @@ const spec = swaggerJsDoc({
             }
         ]
     },
-    apis: ["./controllers/*.js"]
+    apis: ["./routes/*.js"]
 })
 
 //Routes
