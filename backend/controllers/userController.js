@@ -12,23 +12,34 @@ const cloudinary = require("cloudinary");
  * @swagger
  * components:
  *   schemas:
- *    User:
+ *    NewUser:
  *      type : object
  *      required:
  *        -name
  *        -email
  *        -password
- *        -isAdmin
+ *        -userRole
  *      properties:
  *        id:
- *          type: INTEGER
- *          description : 'Automatically generated'
+ *          type: STRING
+ *          description : The auto-generated objectId by the MongoDb
  *          name:
  *            type: STRING
- *            descrioption: Name of User
+ *            descrioption: Name of the User
  *          email:
  *           type: STRING
- *           descrioption: Name of Email
+ *           descrioption: Email of the User
+ *          password:
+ *           type: STRING
+ *           descrioption: Password of the user (8 characters long)
+ *          userRole:
+ *           type: STRING
+ *           descrioption: By default the user only signup as an user, only the admin will make him/her an admin
+ *        example:
+ *          name: Abhishek
+ *          email: asahu532@gmail.com
+ *          password : 123456789
+ *          userRole : User
  */
 exports.registerUser = async (req, res, next) => {
   try {
@@ -65,6 +76,29 @@ exports.registerUser = async (req, res, next) => {
     return res.status(400).send(e);
   }
 };
+
+/**
+ * @swagger
+ * /api/v1/register:
+ *  post:
+ *    summary : Creates a new user
+ *    requestBody: 
+ *      required : true
+ *      content:
+ *        application/json
+ *          schema: 
+ *            $ref : "#/components/schemas/newUser"
+ *     responses:
+ *      201:
+ *        description: The user is successfully created
+ *      404:
+ *        description: The user is already exists
+ *      400:
+ *        description: Validations failed
+ *      500:
+ *         description: Internal server failed
+ */
+
 
 //LOGIN USER
 

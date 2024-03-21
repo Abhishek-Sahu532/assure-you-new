@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 app.use(multer({ dest: 'backend/uploads/', limits: { fileSize: 10 * 1024 * 1024 } }).single('image'));
 
 
-const specs = swaggerJsDoc({
+const spec = swaggerJsDoc({
     definition: {
         openapi: '3.0.0',
         info: {
@@ -28,13 +28,13 @@ const specs = swaggerJsDoc({
             version: '1.0.0',
             description: 'Buy anything'
         },
-        server: [
+        servers: [
             {
                 url: 'https://assure-you-new.onrender.com'
             }
         ]
     },
-    apis: ['./controllers/*.js']
+    apis: ["./controllers/*.js"]
 })
 
 //Routes
@@ -48,7 +48,7 @@ app.use('/api/v1', product);
 app.use('/api/v1', userRoutes);
 app.use('/api/v1', order);
 app.use('/api/v1', payment);
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs));
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(spec));
 
 
 app.use(express.static(path.join(__dirname, "../front_end/build")));
