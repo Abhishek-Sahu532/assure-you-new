@@ -206,7 +206,7 @@ function Navbar({ user }) {
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar
                     alt="avatar"
-                    src={user.avatar.url ? user.avatar.url : "./Profile.png"}
+                    src={user ? user.avatar.url : "./Profile.png"}
                   />
                 </IconButton>
               </Tooltip>
