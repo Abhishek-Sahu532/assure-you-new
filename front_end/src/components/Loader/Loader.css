@@ -1,24 +1,36 @@
-.loading{
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    display: grid;
-    place-items: center;
-}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; /* Remove default margin */
+  }
 
-
-.loading > div{
-    width: 10vmax;
-    height: 10vmax;
-    border-bottom: 5px solid rgb(110,110,110);
-border-radius: 50%;  
-animation: loadingRotate 800ms linear infinite;
-}
-
-
-
-@keyframes loadingRotate {
-    to{
-        transform: rotateZ(-360deg);
-    }
-}
+.custom-loader {
+    width: 80px;
+    height: 80px;
+    color:#534CAB;
+    position: relative;
+    justify-content: center;
+    background:
+      conic-gradient(from 134deg at top   ,currentColor 92deg,#0000 0) top,
+      conic-gradient(from -46deg at bottom,currentColor 92deg,#0000 0) bottom;
+    background-size:100% 50%;
+    background-repeat: no-repeat;
+  }
+  .custom-loader:before {
+    content:'';
+    position: absolute;
+    inset:0;
+    background:
+      conic-gradient(from  -135deg at top 0    left   44px ,#0000 ,currentColor 1deg 90deg,#0000 0),
+      conic-gradient(from  -45deg  at right 0  top    44px ,#0000 ,currentColor 1deg 90deg,#0000 0),
+      conic-gradient(from   45deg  at bottom 0 right  44px ,#0000 ,currentColor 1deg 90deg,#0000 0),
+      conic-gradient(from  135deg  at left  0  bottom 40px ,#0000 ,currentColor 1deg 90deg,#0000 0);
+     animation: sh7 1.5s infinite cubic-bezier(0.3,1,0,1);
+  }
+  @keyframes sh7 {
+     33%  {inset:-20px;transform: rotate(0deg)}
+     66%  {inset:-20px;transform: rotate(90deg)}
+     100% {inset:0    ;transform: rotate(90deg)}
+  }
