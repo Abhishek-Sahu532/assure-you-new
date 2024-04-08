@@ -24,6 +24,9 @@ app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 app.use(multer({ dest: 'backend/uploads/', limits: { fileSize: 10 * 1024 * 1024 } }).single('image'));
 
 
+//for temp to check the connection
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 // const spec = swaggerJsdoc({
 //     failOnErrors: true,
 //     definition: {
