@@ -14,8 +14,8 @@ dotenv.config({ path: './config/.env' })
 
 app.use(cors(
     {
-        origin : ['https://assure-you.netlify.app/'],
-        credentials : true
+        origin: 'https://assure-you-client.vercel.app/',
+        credentials: true
     }
 ));
 app.use(express.json());
@@ -65,9 +65,9 @@ app.use('/api/v1', payment);
 //     res.sendFile(path.join(__dirname, "../front_end/build/index.html"))
 // })
 
-// app.get('/', function (req, res) {
-//     res.redirect('https://assure-you.netlify.app/')
-// })
+app.get('*/', function (req, res) {
+    res.redirect('https://assure-you-client.vercel.app/')
+})
 
 
 //middleware for error
