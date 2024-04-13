@@ -39,37 +39,36 @@ import NotFound from "./components/NotFound/NotFound.js";
 import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./Sections/Footer/Footer.js";
 
-
 function App() {
+
   const { isAuthenticated, user } = useSelector((state) => state.user);
-
-
   const [stripeKey, setStripeKey] = useState(null);
-  const [isAdmin, setIsAdmin] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false);
+  
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Roboto", "Droid Sans", "Chilanka", "Montserrat" ],
+        families: ["Roboto", "Droid Sans", "Chilanka", "Montserrat"],
       },
     });
 
     // CHECKING THE USER ROLES
-    if (user && user.role === 'admin') {
-      setIsAdmin(true)
+    if (user && user.role === "admin") {
+      setIsAdmin(true);
     }
 
-    // RECEIVING THE STRIPE KEYS 
+    // RECEIVING THE STRIPE KEYS
     async function getStripeApiKey() {
-      try{
+      try {
         const { data } = await axios.get("/api/v1/stripeapikey");
         setStripeKey(data.stripeApiKey);
-      }catch(e){
+      } catch (e) {
         // console.log('Error fetching in stripe key', e)
-        return e
+        return e;
       }
     }
     getStripeApiKey();
-    store.dispatch(loadUser()); //when user logged in, In the homepage the details of user will load
+    store.dispatch(loadUser()); //when user logged in, In the homepage the details of user will load`
   }, []);
   return (
     <div className="App">
@@ -97,7 +96,6 @@ function App() {
         <Route path="/password/forget" Component={ForgetPassword} />
         <Route path="/password/reset/:token" Component={ResetPassword} />
 
-
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
           <Route path="/account" element={<Profile />} />
           <Route path="/me/update" element={<UpdateProfile />} />
@@ -108,13 +106,19 @@ function App() {
           <Route path="/orders" element={<MyOrders />} />
           <Route path="/order/confirm" element={<ConfirmOrder />} />
           <Route path="/order/:id" element={<OrderDetails />} />
-          <Route path="/order/:id" element={<OrderDetails />} />
-          <Route path="/order/:id" element={<OrderDetails />} />
-
+          {/* <Route path="/order/:id" element={<OrderDetails />} />
+          <Route path="/order/:id" element={<OrderDetails />} /> */}
         </Route>
 
         {/* ADMIN ROUTES */}
-        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={isAdmin} />}>
+        <Route
+          element={
+            <ProtectedRoute
+              isAuthenticated={isAuthenticated}
+              isAdmin={isAdmin}
+            />
+          }
+        >
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/products" element={<ProductList />} />
           <Route path="/admin/product" element={<NewProduct />} />
@@ -124,15 +128,13 @@ function App() {
           <Route path="/admin/users" element={<UsersList />} />
           <Route path="/admin/user/:id" element={<UpdateUser />} />
           <Route path="/admin/reviews" element={<ProductReview />} />
-  
-
         </Route>
 
-         <Route
+        <Route
           Component={
             window.location.pathname === "/process/payment" ? null : NotFound
           }
-        /> 
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

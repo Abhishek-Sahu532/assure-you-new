@@ -199,7 +199,7 @@ exports.forgetPassword = async (req, res, next) => {
     }
 
     // await user.save();
-    console.log("controllerFrom", user.resetPasswordToken);
+    // console.log("controllerFrom", user.resetPasswordToken);
   } catch (e) {
     console.log(e);
     return res.status(500).send(e);

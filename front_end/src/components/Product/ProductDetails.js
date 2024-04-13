@@ -191,7 +191,7 @@ const ProductDetails = () => {
               </div>
 
               <div className="detailsBlock-4">
-                Description : <p>{product.description} </p>
+               <h5>Description : </h5>  <p>{product.description} </p>
               </div>
               <button className="submitReview" onClick={submitReviewToggle}>
                 Submit Review

@@ -21,8 +21,9 @@ const LoginSingup = () => {
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
-  const [searchParams] = useSearchParams();
 
+
+  const [searchParams] = useSearchParams();
   const loginTab = useRef(null);
   const registerTab = useRef(null);
   const switcherTab = useRef(null);
@@ -114,10 +115,10 @@ const LoginSingup = () => {
   };
 
   return (
-    <Fragment>
-      {loading ? (
-        <Loader />
-      ) : (
+    // <Fragment>
+    //   {loading ? (
+    //     <Loader />
+    //   ) : (
         <Fragment>
           <div className="LoginSignupContainer">
             <div className="LoginSignupBox">
@@ -214,8 +215,8 @@ const LoginSingup = () => {
             </div>
           </div>
         </Fragment>
-      )}
-    </Fragment>
+    //   )}
+    // </Fragment>
   );
 };
 
