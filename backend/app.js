@@ -12,20 +12,13 @@ const swaggerJsdoc = require('swagger-jsdoc');
 //config
 dotenv.config({ path: './config/.env' })
 
-app.use(cors(
-    {
-        origin: 'https://assure-you-client.vercel.app/',
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 app.use(multer({ dest: 'backend/uploads/', limits: { fileSize: 10 * 1024 * 1024 } }).single('image'));
 
 
-//for temp to check the connection
-app.get("/", (req, res) => res.send("Express on Vercel"));
 
 // const spec = swaggerJsdoc({
 //     failOnErrors: true,
@@ -59,15 +52,15 @@ app.use('/api/v1', payment);
 // app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(spec));
 
 
-// app.use(express.static(path.join(__dirname, "../front_end/build")));
+app.use(express.static(path.join(__dirname, "../front_end/build")));
 
-// app.get('/*', function (req, res) {
-//     res.sendFile(path.join(__dirname, "../front_end/build/index.html"))
-// })
-
-app.get('*/', function (req, res) {
-    res.redirect('https://assure-you-client.vercel.app/')
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, "../front_end/build/index.html"))
 })
+
+// app.get('*/', function (req, res) {
+//     res.redirect('https://assure-you-client.vercel.app/')
+// })
 
 
 //middleware for error
