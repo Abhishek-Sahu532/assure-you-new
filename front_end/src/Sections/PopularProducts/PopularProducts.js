@@ -43,6 +43,7 @@ const PopularProducts = () => {
             <div className='productDiv'>
 
                 {products.map((product) => (
+                    
                     <PopularProductCard key={product.name} {...product} />
                 ))}
 

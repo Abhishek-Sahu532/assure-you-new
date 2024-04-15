@@ -22,7 +22,6 @@ const LoginSingup = () => {
     (state) => state.user
   );
 
-
   const [searchParams] = useSearchParams();
   const loginTab = useRef(null);
   const registerTab = useRef(null);
@@ -119,102 +118,102 @@ const LoginSingup = () => {
     //   {loading ? (
     //     <Loader />
     //   ) : (
-        <Fragment>
-          <div className="LoginSignupContainer">
-            <div className="LoginSignupBox">
-              <div>
-                <div className="login_singup_toggle">
-                  <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>
-                  <p onClick={(e) => switchTabs(e, "register")}>REGISTER</p>
-                </div>
-                <button ref={switcherTab}></button>
-              </div>
-
-              <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
-                <div className="loginEmail">
-                  <MailOutlineIcon />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    value={loginEmail}
-                    onChange={(e) => {
-                      setLoginEmail(e.target.value);
-                    }}
-                  />
-                </div>
-                <div className="loginPassword">
-                  <LockOpenIcon />
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    required
-                    value={loginPassword}
-                    onChange={(e) => {
-                      setLoginPassword(e.target.value);
-                    }}
-                  />
-                </div>
-
-                <Link to="/password/forget">Forget Password</Link>
-                <input type="submit" value="Login" className="loginBtn" />
-
-                <OAuth />
-              </form>
-              <form
-                className="signUpForm"
-                ref={registerTab}
-                encType="multipart/form-data"
-                onSubmit={registerSubmit}
-              >
-                <div className="singUpName">
-                  <FaceIcon />
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    required
-                    name="name"
-                    value={name}
-                    onChange={registerDataChange}
-                  />
-                </div>
-                <div className="signUpEmail">
-                  <MailOutlineIcon />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    name="email"
-                    value={email}
-                    onChange={registerDataChange}
-                  />
-                </div>
-                <div className="signUpPassword">
-                  <LockOpenIcon />
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    required
-                    name="password"
-                    value={password}
-                    onChange={registerDataChange}
-                  />
-                </div>
-                <div id="registerImage">
-                  <img src={avatarPreview} alt="Avatar Preview" />
-                  <input
-                    type="file"
-                    name="avatar"
-                    accept="image/*"
-                    onChange={registerDataChange}
-                  />
-                </div>
-                <input type="submit" value="Register" className="signupBtn" />
-                <OAuth />
-              </form>
+    <Fragment>
+      <div className="LoginSignupContainer">
+        <div className="LoginSignupBox">
+          <div>
+            <div className="login_singup_toggle">
+              <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>
+              <p onClick={(e) => switchTabs(e, "register")}>REGISTER</p>
             </div>
+            <button ref={switcherTab}></button>
           </div>
-        </Fragment>
+
+          <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
+            <div className="loginEmail">
+              <MailOutlineIcon />
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                value={loginEmail}
+                onChange={(e) => {
+                  setLoginEmail(e.target.value);
+                }}
+              />
+            </div>
+            <div className="loginPassword">
+              <LockOpenIcon />
+              <input
+                type="password"
+                placeholder="Password"
+                required
+                value={loginPassword}
+                onChange={(e) => {
+                  setLoginPassword(e.target.value);
+                }}
+              />
+            </div>
+
+            <Link to="/password/forget">Forget Password</Link>
+            <input type="submit" value="Login" className="loginBtn" />
+
+            <OAuth />
+          </form>
+          <form
+            className="signUpForm"
+            ref={registerTab}
+            encType="multipart/form-data"
+            onSubmit={registerSubmit}
+          >
+            <div className="singUpName">
+              <FaceIcon />
+              <input
+                type="text"
+                placeholder="Name"
+                required
+                name="name"
+                value={name}
+                onChange={registerDataChange}
+              />
+            </div>
+            <div className="signUpEmail">
+              <MailOutlineIcon />
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                name="email"
+                value={email}
+                onChange={registerDataChange}
+              />
+            </div>
+            <div className="signUpPassword">
+              <LockOpenIcon />
+              <input
+                type="password"
+                placeholder="Password"
+                required
+                name="password"
+                value={password}
+                onChange={registerDataChange}
+              />
+            </div>
+            <div id="registerImage">
+              <img src={avatarPreview} alt="Avatar Preview" />
+              <input
+                type="file"
+                name="avatar"
+                accept="image/*"
+                onChange={registerDataChange}
+              />
+            </div>
+            <input type="submit" value="Register" className="signupBtn" />
+            <OAuth />
+          </form>
+        </div>
+      </div>
+    </Fragment>
     //   )}
     // </Fragment>
   );

@@ -78,7 +78,14 @@
   position: fixed;
   top: 8vmax;
   left: 2vmax;
-  overflow: visible;
+  color: #7286d3;
+  padding: 0.5vmax;
+padding-right: 2vmax;
+/* overflow-x: hidden; */
+  backdrop-filter: blur(10px);
+  /* overflow-y: auto;  */
+  z-index: 999;
+
 }
 
 .categoryBox {
@@ -86,7 +93,7 @@
 }
 .category-link {
   list-style: none;
-  color: rgba(0, 0, 0, 0.61);
+  /* color: rgba(0, 0, 0, 0.61); */
   font: 400 0.9vmax "Roboto";
   margin: 0.4vmax;
   cursor: pointer;

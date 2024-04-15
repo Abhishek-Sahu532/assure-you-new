@@ -44,14 +44,16 @@
 /* PRODUCT CARD */
 
 .productCard {
-  width: 17vmax;
-  height: 30vmax;
+  width: 19vmax;
+  height: 32vmax;
+  /* height: auto; */
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: rgb(48, 48, 48);
   margin: 2vmax;
   transition: all 0.5s;
+  padding: 1vmax;
   padding-bottom: 0.5vmax;
   border-radius: 5px;
   /* border: 1px solid red; */
@@ -60,14 +62,16 @@
 }
 
 .productCard > img {
-  width: 17vmax;
-  height: 25vmax;
+  width: 19vmax;
+  height: 22vmax;
   border-radius: 5px;
   align-items: center;
+  /* padding-bottom: 1vmax/; */
 }
 
 .productCard > div {
   margin: 0.5vmax;
+  padding-top: 0.5vmax;
   display: flex;
   justify-content: flex-start;
   align-items: center;

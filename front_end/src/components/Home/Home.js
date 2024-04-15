@@ -18,7 +18,6 @@ import PopularProducts from "../../Sections/PopularProducts/PopularProducts.js";
 import SuperQuality from "../../Sections/SuperQuality/SuperQuality.js";
 import Services from "../../Sections/Services/Services.js";
 
-
 const Home = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
@@ -82,14 +81,16 @@ const Home = () => {
 
           <div className="container" id="container">
             {products &&
-              products.map((product) => (
-                <ProductCard product={product} key={product.name} />
-              ))}
+              products
+                .slice(0, 3)
+                .map((product) => (
+                  <ProductCard product={product} key={product.name} />
+                ))}
           </div>
 
-<PopularProducts />
-<SuperQuality />
-<Services />
+          <PopularProducts />
+          <SuperQuality />
+          <Services />
         </Fragment>
       )}
     </Fragment>

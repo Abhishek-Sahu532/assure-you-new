@@ -22,7 +22,6 @@ import ListAltIcon from "@material-ui/icons/ListAlt";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { logoutUser } from "../../actions/userAction";
-import "./navbar.css";
 
 function Navbar({ user }) {
   const { isAuthenticated } = useSelector((state) => state.user);
@@ -102,7 +101,7 @@ function Navbar({ user }) {
     <AppBar position="static" className="navbar">
       <Container
         maxWidth="xl"
-        sx={{ backgroundColor: "white", position: "fixed", zIndex: "10" }}
+        sx={{ backgroundColor: "white", position: "fixed", zIndex: "999" }}
       >
         <Toolbar disableGutters>
           {/* DESKTOP VIEW*/}
@@ -179,7 +178,7 @@ function Navbar({ user }) {
               <Button
                 key={page.component}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: "block", zIndex: "15", }}
+                sx={{ my: 2, color: "inherit", display: "block", zIndex: "15" }}
               >
                 <Link to={page.path}>{page.component} </Link>
               </Button>

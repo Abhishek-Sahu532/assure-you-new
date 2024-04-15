@@ -1,16 +1,16 @@
 .myOrdersPage {
   width: 100vw;
   max-width: 100%;
-  padding: 3vmax 9vmax;
+  padding: 2vmax 9vmax;
   box-sizing: border-box;
   background-color: rgb(235, 235, 235);
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
-  margin-top: 5vmax;
+  margin-top: 4vmax;
 }
 
 #myOrdersHeading {

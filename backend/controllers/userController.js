@@ -41,6 +41,8 @@ const cloudinary = require("cloudinary");
  *        password : 123456789
  *        userRole : User
  */
+
+
 exports.registerUser = async (req, res, next) => {
   try {
     const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
